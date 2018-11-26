@@ -1,0 +1,21 @@
+﻿@using WordCount.Models;
+@model IEnumerable<WordCount.Models.WordsList>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Text</th>
+        <th>Count</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.text)</td>
+            <td>@Html.DisplayFor(m => item.count)</td>
+        </tr>
+    }
+</table>
+
